@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="slyles/style.css">
+    <link rel="stylesheet" href="slyles/modal.css">
+    <link rel="stylesheet" href="slyles/basket.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="header">
+    <h2>Каталог</h2>
+    <h1>Магазин.ключи активации Windows раздел </h1>
+    <h2>справка</h2>
+</div>
+<div class="catalog">
+    <div class="activWin">
+        <img src='assets/JetBrainsIcons/jet.png' alt="" class='image' />
+        <a href='index.html' target="_blank">JetBrains(лицензии)</a>
+    </div>
+    <div class="activOffice">
+        <img src='assets/OfficeIcons/primer.png' alt="" class='image' />
+        <a href="office.html" target="_blank">Microsoft office</a>
+    </div>
+</div>
+<div class="sells">
+    <div class="sell">
+        <img src='assets/winIcons/win7.png' alt="" class="image1"/>
+        <h2>Windows XP</h2>
+        <button class="addtobasket" id="winXP">2500р</button>
+    </div>
+    <div class="sell">
+        <img src='assets/winIcons/win7.png' alt="" class="image1"/>
+        <h2>Windows 7</h2>
+        <button class="addtobasket" id="win7">3000р</button>
+    </div>
+    <div class="sell">
+        <img src='assets/winIcons/win10.png' alt="" class="image1"/>
+        <h2>Windows 10</h2>
+        <button class="addtobasket" id="win10">10000р</button>
+    </div>
+    <div class="sell">
+        <img src='assets/winIcons/win11.png' alt="" class="image1"/>
+        <h2>Windows 11</h2>
+        <button class="addtobasket" id="win11">13000р</button>
+    </div>
+</div>
+<div class="modal" id="modal">
+    <div class="m_content" id="m_content">
+        <button class="closeModal" id="closeModal">X</button>
+        <h1 id="text">Окно оплаты</h1>
+        <input type="email" class="inp" id="inp1" placeholder="введите электронную почту">
+        <input type="number" class="inp" id="inp2" placeholder="введите номер карты">
+        <input type="tel" class="inp" id="inp3" placeholder="введите номер телефона">
+        <button class="sumbit" id="sumbit" onclick="change()">Потвердить</button>
+    </div>
+    <!--корзина-->
+    <div class="basket">
+        <div class="basketContent" id="basketContent">
+            <button class="closeBas" onclick="closeB()">X</button>
+            <h2 class="text">ваша корзина</h2>
+            <h2><span id="totalpriceInBasket">0</span></h2>
+            <button class="sumbit" onclick="openM()">Потвердить</button>
+        </div>
+    </div>
+    <script src="JavaScript/modal.js"></script>
+    <script src="JavaScript/basket.js"></script>
+</body>
+</html>
