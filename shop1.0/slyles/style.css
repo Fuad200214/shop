@@ -1,0 +1,86 @@
+@keyframes min-shake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(0.2px, 0.2px); }
+    50% { transform: translate(-0.2px, -0.2px); }
+    75% { transform: translate(0.2px, -0.2px); }
+    100% { transform: translate(-0.2px, 0.2px); }
+}
+body{
+    background-color: #030114;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 500px;
+    background-color: rgba(255,255,255,0.04);
+    border-radius: 15px;
+    height: 100px;
+    text-align: center;
+    color: #fff;
+}
+.catalog{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+    background-color: rgba(255,255,255,0.04);
+    border-radius: 15px;
+    height: 900px;
+    width: 270px;
+    color: white;
+}
+.activeOffice {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    gap: 10px;
+}
+.image{
+    width: 50px;
+    height: 50px;
+}
+.sells{
+    display: grid;
+    grid-template-columns:repeat(4, 2fr);
+    gap: 20px;
+    width: 1000px;
+    height: 600px;
+    position: absolute;
+    left: 300px;
+    top: 200px;
+}
+.image1{
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+}
+.sell{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(255,255,255,0.04);
+    color: white;
+    border-radius: 12px;
+    &:hover{
+        box-shadow: 0 0 10px #ffffff, 0 0 30px #ffffff;
+    }
+}
+.buyBtn{
+    color: white;
+    background-color: #02164c;
+    border: none;
+    border-radius: 12px;
+    height: 25px;
+    &:hover{
+        box-shadow: 0 0 10px #ffffff, 0 0 30px #ffffff;
+        transform: translateY(-5px);
+    }
+    &:active{
+        scale: 0.9;
+    }
+}
