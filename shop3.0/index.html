@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="slyles/style.css">
+    <link rel="stylesheet" href="slyles/modal.css">
+    <link rel="stylesheet" href="slyles/basket.css">
+    <title>Document</title>
+</head>
+<body>
+<!--страница-->
+<div class="header">
+    <h2>Каталог</h2>
+    <h1>Магазин. IT раздел </h1>
+    <h2>справка</h2>
+</div>
+<div class="catalog">
+    <div class="basketBtn">
+        <img src="assets/basket.png" class="openBasket" id='openBasket' onclick="openB()" alt="Корзина">
+    </div>
+    <div class="activWin">
+        <img src='assets/winIcons/win7.png' alt="" class='image' />
+        <a href="winpage.html" target="_blank">Windows(ключ активации)</a>
+    </div>
+    <div class="activeOffice">
+        <img src='/assets/OfficeIcons/primer.png' alt="" class='image' />
+        <a href="office.html">M. office (ключ активации)</a>
+    </div>
+</div>
+<div class="sells">
+    <div class="sell">
+        <img src='/assets/JetBrainsIcons/cl.png' alt="" class="image1"/>
+        <h2 class="text" id="clprice">Clion (C, C++) <p>Цена: $<span class="price">100</span></p></h2>
+        <div class="basketBtn">
+            <button class="addtobasket"  data-price="150">добавить в корзину</button>
+        </div>
+    </div>
+    <div class="sell">
+        <img src='/assets/JetBrainsIcons/dg.png' alt="" class="image1"/>
+        <h2 class="text">Datagrip(DataBase) 7000p <p>Цена: $<span class="price">100</span></p></h2>
+        <div class="basketBtn">
+            <button class="addtobasket" data-price="150">>добавить в корзину</button>
+        </div>
+    </div>
+    <div class="sell">
+        <img src='/assets/JetBrainsIcons/go.png' alt="" class="image1"/>
+        <h2 class="text">Goland (Go) 4500p <p>Цена: $<span class="price">100</span></p></h2>
+        <div class="basketBtn">
+            <button class="addtobasket" >добавить в корзину</button>
+        </div>
+    </div>
+    <div class="sell">
+        <img src='/assets/JetBrainsIcons/ij.png' alt="" class="image1"/>
+        <h2 class="text">Intelij Idea (Java) 4500p <p>Цена: $<span class="price">100</span></p></h2>
+        <div class="basketBtn">
+            <button class="addtobasket" data-price="150">добавить в корзину</button>
+        </div>
+    </div>
+    <div class="sell">
+        <img src='/assets/JetBrainsIcons/pc.png' alt="" class="image1"/>
+        <h2 class="text">Pycharm (Python) 4500p <p>Цена: $<span class="price">100</span></p></h2>
+        <div class="basketBtn">
+            <button class="addtobasket" data-price="150">добавить в корзину</button>
+        </div>
+    </div>
+    <div class="sell">
+        <img src='/assets/JetBrainsIcons/rr.png' alt="" class="image1"/>
+        <h2 class="text">RustRover (Rust) 4500p <p>Цена: $<span class="price">100</span></p></h2>
+        <div class="basketBtn">
+            <button class="addtobasket" data-price="150">добавить в корзину</button>
+        </div>
+    </div>
+    <div class="sell">
+        <img src='/assets/JetBrainsIcons/rs.png' alt="" class="image1"/>
+        <h2 class="text">R# (C#) 4500p <p>Цена: $<span class="price">100</span></p></h2>
+        <div class="basketBtn">
+            <button class="addtobasket" data-price="150">добавить в корзину</button>
+            </div>
+    </div>
+    <div class="sell">
+        <img src='/assets/JetBrainsIcons/ws.png' alt="" class="image1"/>
+        <h2 class="text">WebStorm (Frontend) 7000p <p>Цена: $<span class="price">100</span></p></h2>
+        <div class="basketBtn">
+            <button class="addtobasket" data-price="150">добавить в корзину</button>
+        </div>
+    </div>
+    <div class="sell">
+        <img src='/assets/JetBrainsIcons/ps.png' alt="" class="image1"/>
+        <h2 class="text">PHPStorm (PHP) 5000p <p>Цена: $<span class="price">100</span></p></h2>
+        <div class="basketBtn">
+            <button class="addtobasket" data-price="150">добавить в корзину</button>
+        </div>
+    </div>
+    <div class="sell">
+        <img src='/assets/images%20(2)-Photoroom.png' alt="" class="image1"/>
+        <h1 class="text">оплата</h1>
+        <button class="buybtn" onclick='openM()'>оплатить</button>
+    </div>
+<!--модальное окно-->
+</div>
+<div class="modal" id="modal">
+    <div class="m_content" id="m_content">
+        <button class="closeModal" id="closeModal" onclick="closeM()">X</button>
+        <h2 class="text1">Окно оплаты</h2>
+        <h2 class="text1">итого <span id="totalprice">0</span> </h2>
+        <input type="email" class="inp" id="inp1" placeholder="введите электронную почту">
+        <input type="number" class="inp" id="inp2" placeholder="введите номер карты">
+        <input type="tel" class="inp" id="inp3" placeholder="введите номер телефона">
+        <button class="sumbit" id="sumbit">Потвердить</button>
+    </div>
+</div>
+<!--корзина-->
+<div class="basket">
+    <div class="basketContent" id="basketContent">
+        <button class="closeBas" onclick="closeB()">X</button>
+        <h2 class="text">ваша корзина</h2>
+        <div class="box" id="box">
+   
+        </div>
+        <h2><span id="totalpriceInBasket">0</span></h2>
+        <button class="sumbit" onclick="openM()">Потвердить</button>
+    </div>
+</div>
+<script src="JavaScript/modal.js"></script>
+<script src="JavaScript/basket.js"></script>
+</body>
+</html>

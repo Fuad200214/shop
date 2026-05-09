@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="slyles/style.css">
+    <link rel="stylesheet" href="slyles/modal.css">
+    <link rel="stylesheet" href="slyles/basket.css">
+</head>
+<body>
+<div class="header">
+    <h2>Каталог</h2>
+    <h1>Магазин. IT раздел </h1>
+    <h2>справка</h2>
+</div>
+<div class="catalog">
+    <div class="basketBtn">
+        <img src="assets/basket.png" class="openBasket" id='openBasket' onclick="openB()" alt="Корзина">
+    </div>
+    <div class="activJet">
+        <img src='assets/JetBrainsIcons/jet.png' alt="" class='image' />
+        <a href='index.html' target="_blank">JetBrains(лицензии)</a>
+    </div>
+    <div class="activWin">
+        <img src='assets/winIcons/win7.png' alt="" class='image' />
+        <a href="winpage.html" target="_blank">Windows(ключ активации)</a>
+    </div>
+</div>
+<div class="sells">
+    <div class="sell">
+        <img src='assets/OfficeIcons/primer.png' alt="" class="image1"/>
+        <h2>Office 2013 ключ активации</h2>
+        <p>Цена: $<span class="price">100</span></p>
+        <div class="basketBtn">
+            <button class="addtobasket" data-price="150">добавить в корзину</button>
+        </div>
+    </div>
+    <div class="sell">
+        <img src='assets/OfficeIcons/primer.png' alt="" class="image1"/>
+        <h2>Office 2016 ключ активации <p>Цена: $<span class="price">100</span></p></h2>
+        <div class="basketBtn">
+            <button class="addtobasket" data-price="150">добавить в корзину</button>
+        </div>
+    </div>
+    <div class="sell">
+        <img src='assets/OfficeIcons/primer.png' alt="" class="image1"/>
+        <h2>Office 2021 ключ активации</h2>
+        <p>Цена: $<span class="price">100</span></p>
+        <div class="basketBtn">
+            <button class="addtobasket" data-price="150">добавить в корзину</button>
+        </div>
+    </div>
+    <div class="sell">
+        <img src='assets/OfficeIcons/primer.png' alt="" class="image1"/>
+        <h2>Office 2024 ключ активации</h2>
+        <p>Цена: $<span class="price">100</span></p>
+        <div class="basketBtn">
+            <button class="addtobasket" data-price="150">добавить в корзину</button>
+        </div>
+    </div>
+    <div class="modal" id="modal">
+        <div class="m_content" id="m_content">
+            <button class="closeModal" id="closeModal">X</button>
+            <h1 id="text">Окно оплаты</h1>
+            <input type="email" class="inp" id="inp1" placeholder="введите электронную почту">
+            <input type="number" class="inp" id="inp2" placeholder="введите номер карты">
+            <input type="tel" class="inp" id="inp3" placeholder="введите номер телефона">
+            <button class="sumbit" id="sumbit" onclick="change()">Потвердить</button>
+        </div>
+    </div>
+    <!--корзина-->
+    <div class="basket">
+        <div class="basketContent" id="basketContent">
+            <button class="closeBas" onclick="closeB()">X</button>
+            <h2 class="text">ваша корзина</h2>
+            <h2><span id="totalpriceInBasket">0</span></h2>
+            <div class="box" id="box">
+   
+            </div>
+            <button class="sumbit" onclick="openM()">Потвердить</button>
+        </div>
+    </div>
+</div>
+<script src="JavaScript/modal.js"></script>
+<script src="JavaScript/basket.js"></script>
+</body>
+</html>
