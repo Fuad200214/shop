@@ -1,0 +1,124 @@
+@keyframes min-shake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(0.4px, 0.2px); }
+    50% { transform: translate(-0.4px, -0.4px); }
+    75% { transform: translate(0.4px, -0.4px); }
+    100% { transform: translate(-0.4px, 0.4px); }
+}
+body{
+    background-color: #030114;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 500px;
+    background-color: rgba(255,255,255,0.04);
+    border-radius: 15px;
+    height: 100px;
+    text-align: center;
+    color: #fff;
+}
+.catalog{
+    display: flex;
+    position: static !important;
+    margin-top: 0 !important;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    background-color: rgba(255,255,255,0.04);
+    border-radius: 15px;
+    height: 1135px;
+    width: 270px;
+    color: white;
+}
+.activeOffice {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    gap: 10px;
+}
+.image{
+    width: 50px;
+    height: 50px;
+}
+.sells{
+    display: grid;
+    grid-template-columns:repeat(4, 4fr);
+    gap: 40px;
+    width: 1000px;
+    height: 800px;
+    position: absolute;
+    left: 300px;
+    top: 200px;
+}
+.image1{
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+}
+.sell{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    justify-content: space-between;
+    gap: 5px;
+    width: 320px;
+    height: 320px;
+    background-color: rgba(255,255,255,0.04);
+    color: white;
+    border-radius: 12px;
+    &:hover{
+        box-shadow: 0 0 10px #ffffff, 0 0 30px #ffffff;
+    }
+}
+.basketBtn{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.addtobasket{
+    color: white;
+    background-color: rgba(1, 69, 20,0.4);
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    height: 50px;
+    &:hover{
+        transform: translateY(-5px);
+    }
+    &:active{
+        scale: 0.9;
+    }
+}
+.buybtn{
+    color: white;
+    background-color: rgba(1, 69, 20,0.4);
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    height: 50px;
+    &:hover{
+        box-shadow: 0 0 10px #ffffff, 0 0 30px #ffffff;
+        transform: translateY(-5px);
+        }
+    &:active{
+        scale: 0.9;
+    }
+}
+.inp{
+    color: white;
+    background-color: #01113e;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    height: 50px;
+}

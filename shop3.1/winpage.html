@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="slyles/style.css">
+    <link rel="stylesheet" href="slyles/modal.css">
+    <link rel="stylesheet" href="slyles/basket.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="header">
+    <h2>Каталог</h2>
+    <h1>Магазин.ключи активации Windows раздел </h1>
+    <img src="assets/basket.png" class="openBasket" id='openBasket' onclick="openB()" alt="Корзина">
+</div>
+<!--общая часть-->
+<div class="catalog">
+    <div class="activWin">
+        <img src='assets/JetBrainsIcons/jet.png' alt="" class='image' />
+        <a href='index.html' target="_blank">JetBrains(лицензии)</a>
+    </div>
+    <div class="activOffice">
+        <img src='assets/OfficeIcons/primer.png' alt="" class='image' />
+        <a href="office.html" target="_blank">Microsoft office</a>
+    </div>
+</div>
+<!--ячейки-->
+<div class="sells">
+    <div class="sell">
+        <img src='assets/winIcons/win7.png' alt="" class="image1"/>
+        <h2>Windows XP <p>Цена: $<span class="price">100</span></p></h2>
+        <div class="basketBtn">
+            <button class="addtobasket" data-price="150">добавить в корзину</button>
+        </div>
+    </div>
+    <div class="sell">
+        <img src='assets/winIcons/win7.png' alt="" class="image1"/>
+        <h2>Windows 7 <p>Цена: $<span class="price">100</span></p></h2>
+        <div class="basketBtn">
+            <button class="addtobasket" data-price="150">добавить в корзину</button>
+        </div>
+    </div>
+    <div class="sell">
+        <img src='assets/winIcons/win10.png' alt="" class="image1"/>
+        <h2>Windows 10 <p>Цена: $<span class="price">100</span></p></h2>
+        <div class="basketBtn">
+            <button class="addtobasket" data-price="150">добавить в корзину</button>
+        </div>
+    </div>
+    <div class="sell">
+        <img src='assets/winIcons/win11.png' alt="" class="image1"/>
+        <h2>Windows 11 <p>Цена: $<span class="price">100</span></p></h2>
+        <div class="basketBtn">
+            <button class="addtobasket" data-price="150">добавить в корзину</button>
+        </div>
+    </div>
+    <div class="sell">
+        <img src='/assets/images%20(2)-Photoroom.png' alt="" class="image1"/>
+        <h1 class="text">оплата</h1>
+        <button class="buybtn" onclick='openM()'>оплатить</button>
+    </div>
+</div>
+<div class="modal" id="modal">
+    <div class="m_content" id="m_content">
+        <button class="closeModal" id="closeModal" onclick="closeM()">X</button>
+        <h1 class="text1">Окно оплаты</h1>
+        <h1 class="text1">итого <span id="totalprice">0</span> </h1>
+        <input type="email" class="inp" id="inp1" placeholder="введите электронную почту">
+        <input type="number" class="inp" id="inp2" placeholder="введите номер карты">
+        <input type="tel" class="inp" id="inp3" placeholder="введите номер телефона">
+        <button class="sumbit" id="sumbit">Потвердить</button>
+    </div>
+</div>
+    <!--корзина-->
+<div class="basket">
+    <div class="basketContent" id="basketContent">
+        <div class="yourBasket">
+            <h1 class="text">ваша корзина</h1>
+        </div>
+        <button class="closeBas" onclick="closeB()">X</button>
+        <div class="box" id="box">
+
+        </div>
+        <h1><span id="totalpriceInBasket">0</span>₽</h1>
+        <button class="sumbit" onclick="openM()">Потвердить</button>
+    </div>
+</div>
+<script src="JavaScript/modal.js"></script>
+<script src="JavaScript/basket.js"></script>
+</body>
+</html>
